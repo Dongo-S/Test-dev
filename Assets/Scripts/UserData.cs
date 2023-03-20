@@ -27,7 +27,7 @@ public struct UserPicture
     public string thumbnail;
 }
 
-public class UserData
+public struct UserData
 {
     public string gender;
     public UserName name;

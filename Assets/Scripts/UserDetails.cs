@@ -12,6 +12,14 @@ public class UserDetails : MonoBehaviour
     [SerializeField]
     Image photo;
 
+    [SerializeField]
+    Button showDetailsButton;
+
+    [SerializeField]
+    Button likeButton;
+    
+    [SerializeField]
+    Image likeImage;
 
 
     // Start is called before the first frame update
@@ -20,9 +28,4 @@ public class UserDetails : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
