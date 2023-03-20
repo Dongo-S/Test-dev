@@ -3,12 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public struct UserName
 {
     public string title;
     public string first;
     public string last;
 }
+
+
+[Serializable]
 public struct UserBirth
 {
     public string date;
@@ -16,17 +20,20 @@ public struct UserBirth
 
 }
 
+[Serializable]
 public struct UserLocation
 {
     public string city;
 }
 
+[Serializable]
 public struct UserPicture
 {
     public string large;
     public string thumbnail;
 }
 
+[Serializable]
 public struct UserData
 {
     public string gender;
@@ -35,4 +42,10 @@ public struct UserData
     public string email;
     public UserBirth dob;
     public UserPicture picture;
+}
+
+[Serializable]
+public struct UsersResults
+{
+    public List<UserData> results;
 }

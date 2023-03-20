@@ -17,7 +17,7 @@ public class UserDataManager : MonoBehaviour, IRecyclableScrollRectDataSource
     private int _dataLength;
 
     [SerializeField]
-    List<UserData> userData = new List<UserData>(50);
+    UsersResults userData;
 
     // Start is called before the first frame update
     void Start()
@@ -35,11 +35,9 @@ public class UserDataManager : MonoBehaviour, IRecyclableScrollRectDataSource
 
     public void OnSucces(string data)
     {
-        userData.Clear();
-        userData = JsonConvert.DeserializeObject<List<UserData>>(data);
+        userData = JsonConvert.DeserializeObject<UsersResults>(data);
 
         Debug.Log(data);
-
     }
 
 
