@@ -9,6 +9,12 @@ public struct UserName
     public string title;
     public string first;
     public string last;
+
+    public string GetFullName()
+
+    {
+        return string.Format("{0} {1} {2}", title, first, last);
+    }
 }
 
 
@@ -42,6 +48,7 @@ public struct UserData
     public string email;
     public UserBirth dob;
     public UserPicture picture;
+
 }
 
 [Serializable]

@@ -38,6 +38,7 @@ public class UserDataManager : MonoBehaviour, IRecyclableScrollRectDataSource
         userData = JsonConvert.DeserializeObject<UsersResults>(data);
 
         Debug.Log(data);
+        _recyclableScrollRect.Initialize(this);
     }
 
 
@@ -48,11 +49,13 @@ public class UserDataManager : MonoBehaviour, IRecyclableScrollRectDataSource
 
     public int GetItemCount()
     {
-        throw new NotImplementedException();
+        return userData.results.Count;
+
     }
 
     public void SetCell(ICell cell, int index)
     {
-        throw new NotImplementedException();
+        var item = cell as UserDetails;
+        item.ConfigureCell(userData.results[index]);
     }
 }
